@@ -1,0 +1,29 @@
+<!-- Every html file must strat with <!DOCTYPE html> markup -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first app</title>
+    </head>
+    <body>
+        <h1>CoffeButton</h1>
+        <p id="demo"></p>
+        <!-- Using JavaScript in html file is possible inside <script></script> tags-->
+        <script>
+            console.log("Hello world");
+
+            function makeCoffee(sugar, milk)
+                {
+                var instructions = "Boil water, pour into cup, add coffee granules";
+                instructions += " add " + sugar + " spoons of sugar,";
+                instructions += " add " + milk + "% milk.";
+                return instructions;
+                };
+        </script>
+        <!-- linking separate JavaScript file to hmtl document -->
+        <script src="myapp.js"></script>
+
+            <button type="button" onClick="document.getElementById('demo').innerHTML = makeCoffee(2,2)">
+                Click me to display what Coffee you want.
+            </button>
+    </body>
+</html>
